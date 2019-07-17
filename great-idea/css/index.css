@@ -121,21 +121,34 @@ nav {
 }
 
 nav .nav-wrapper {
-    width: 1024px;
-    margin: 0 auto;
-	padding: 0 70px;
+    width: 100%;
 	display: flex;
 	align-items: center;
 }
+
+ 
+ @media screen and ( min-width: 768px ) {
+	nav .nav-wrapper {
+		width: 1024px;
+		padding: 0 70px;
+		margin: 0 auto;
+   }
+ }
 
 nav a {
     flex: 1;
     font-size: 14px;
     color: #fff;
-    padding: 10px 30px;
+    padding: 10px 5px;
     text-decoration: none;
     transition: background .3s ease-in-out;
     font-family: 'Montserrat', sans-serif;
+}
+
+@media screen and ( min-width: 768px ) {
+	nav a {
+		padding: 10px 30px;
+   }
 }
 
 nav a:hover {
@@ -264,10 +277,16 @@ footer a {
 
 .content {
 	margin: 0 auto;
-	width: 880px;
+	width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+@media screen and ( min-width: 768px ) {
+	.content {
+		width: 880px;
+   }
 }
 
 .service-title {
@@ -288,16 +307,17 @@ footer a {
 .service-list {
 	display: flex;
 	flex-wrap: wrap;
-}
-
-.service-list {
-	display: flex;
-	flex-wrap: wrap;
 	justify-content: space-between;
 }
 
+@media screen and ( min-width: 768px ) {
+	.service-list {
+
+   }
+}
+
 .service {
-	width: 48%;
+	width: 100%;
 	padding: 20px;
 	background: #f4f3f4;
 	border: 1px solid #000;
@@ -305,6 +325,12 @@ footer a {
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
+}
+
+@media screen and ( min-width: 768px ) {
+	.service {
+		width: 48%;
+   }
 }
 
 .service a {
@@ -320,10 +346,23 @@ footer a {
 
 .flex-container {
 	display: flex;
+	flex-wrap: wrap;
+}
+
+@media screen and ( min-width: 768px ) {
+	.flex-container {
+		flex-wrap: nowrap;
+   }
 }
 
 .facts {
 	margin-bottom: 80px;
+}
+
+@media screen and ( min-width: 768px ) {
+	.facts {
+		width: 50%;
+   }
 }
 
 .facts p {
